@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple Kafka consumer application that exposes a `GET` endpoint `/betvictor/history` on port `8082`, which provides the history of consumed messages.
+This is a simple Kafka consumer application that exposes a `GET` endpoint `/betvictor/history` on port `8082`, which provides the history of last 10 consumed messages.
 
 The application consumes messages from an external broker and saves them to a PostgreSQL database.
 
