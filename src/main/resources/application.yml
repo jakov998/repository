@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: repository-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/betvictor
+    username: betvictor
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      topic: words.processed
+      group-id: betvictor-group
+      auto-offset-reset: earliest
+      concurrency: 1  # Number of concurrent consumers
+      properties:
+        spring.json.trusted.packages: "*"
+server:
+  port: 8082
